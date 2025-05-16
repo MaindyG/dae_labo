@@ -8,9 +8,8 @@ namespace IdeaManager.UI
         public static IServiceCollection AddUIServices(this IServiceCollection services)
         {
             services.AddSingleton<MainWindow>();
-            services.AddTransient<DashboardViewModel>();
+            services.AddTransient<IdeaListViewModel>();
             services.AddTransient<IdeaFormViewModel>();
-            services.AddTransient<ProjectListViewModel>();
             return services;
         }
     }

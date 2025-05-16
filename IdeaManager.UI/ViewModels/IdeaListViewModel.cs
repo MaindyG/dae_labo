@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace IdeaManager.UI.ViewModels
 {
-    internal class IdeaListViewModel :ObservableObject
+    public partial class IdeaListViewModel :ObservableObject
     {
         private readonly IIdeaService _ideaService;
 

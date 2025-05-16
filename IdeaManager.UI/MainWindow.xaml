@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Content=" Liste des idées" Command="{Binding ShowIdeaListCommand}"/>
+
+        <Button Grid.Row="1" Content=" Proposer une idée"  Command="{Binding ShowIdeaFormCommand}"/>
+        
 
     </Grid>
+    
 </Window>
