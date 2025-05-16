@@ -27,7 +27,7 @@ namespace IdeaManager.Tests.Services
         public async Task RefusIdeeSansTitre_ThrowsArgumentException()
         {
 
-            var idea = new Idea { Title = "", Description = "Sans titre" };
+            var idea = new Idea { Title = "", Description = "ghfghddj" };
             var exempleErreur = await Assert.ThrowsAsync<ArgumentException>(() => _service.SubmitIdeaAsync(idea));
         }
     }

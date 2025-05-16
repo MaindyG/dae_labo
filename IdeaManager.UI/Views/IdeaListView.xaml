@@ -9,6 +9,13 @@
       Title="IdeaListView">
 
     <Grid>
-        
+        <ListView ItemsSource="{Binding Ideas}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Title}" Header="Titre" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Description}" Header="Auteur" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>
