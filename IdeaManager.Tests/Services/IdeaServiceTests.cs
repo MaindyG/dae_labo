@@ -24,7 +24,7 @@ namespace IdeaManager.Tests.Services
       
 
         [Fact]
-        public async Task RefusIdeeSansTitre_ThrowsArgumentException()
+        public async Task RefusIdee()
         {
 
             var idea = new Idea { Title = "", Description = "ghfghddj" };
