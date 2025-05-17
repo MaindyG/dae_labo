@@ -2,7 +2,9 @@
 using CommunityToolkit.Mvvm.Input;
 using IdeaManager.Core.Entities;
 using IdeaManager.Core.Interfaces;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace IdeaManager.UI.ViewModels
 {
@@ -24,19 +26,26 @@ namespace IdeaManager.UI.ViewModels
         [ObservableProperty]
         private string errorMessage;
 
+
+     
+
+
         [RelayCommand]
-        private async Task SubmitAsync()
+        private async Task SubmitCommand()
         {
             try
             {
                 var idea = new Idea
                 {
-                    Title = title,
-                    Description = description
+                    Title = Title,
+                    Description = Description
                 };
 
                 await _ideaService.SubmitIdeaAsync(idea);
                 ErrorMessage = string.Empty;
+                Title = "";
+                Description = "";
+                MessageBox.Show("Idée soumise avec succès !", "Succès");
             }
             catch (Exception ex)
             {

@@ -14,6 +14,7 @@ public partial class App : Application
 
     protected override void OnStartup(StartupEventArgs e)
     {
+        base.OnStartup(e);
         var services = new ServiceCollection();
 
         services.AddDataServices("Data Source=ideas.db");

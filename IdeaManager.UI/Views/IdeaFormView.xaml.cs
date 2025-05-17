@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IdeaManager.UI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,10 @@ namespace IdeaManager.UI.Views
     /// </summary>
     public partial class IdeaFormView 
     {
-        public IdeaFormView()
+        public IdeaFormView(IdeaFormViewModel vm)
         {
             InitializeComponent();
+            DataContext =  vm;
         }
     }
 }

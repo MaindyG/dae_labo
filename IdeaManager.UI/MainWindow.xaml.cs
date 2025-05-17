@@ -1,4 +1,5 @@
 ﻿using IdeaManager.UI.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,9 +18,11 @@ namespace IdeaManager.UI;
 /// </summary>
 public partial class MainWindow : Window
 {
-    public MainWindow(MainViewModel viewModel)
+    public MainWindow()
     {
+        var vm = App.ServiceProvider.GetRequiredService<MainViewModel>();
+
         InitializeComponent();
-        DataContext = viewModel;
+        DataContext = vm;
     }
 }

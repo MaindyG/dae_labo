@@ -30,5 +30,15 @@ namespace IdeaManager.Tests.Services
             var idea = new Idea { Title = "", Description = "ghfghddj" };
             var exempleErreur = await Assert.ThrowsAsync<ArgumentException>(() => _service.SubmitIdeaAsync(idea));
         }
+
+
+        [Fact]
+        public async Task NewIdea()
+        {
+
+            var idea = new Idea { Title = "Voyage", Description = "ghfghddj" };
+            await _service.SubmitIdeaAsync(idea);
+            Assert.Contains("Voyage", idea.Title);
+        }
     }
 }
